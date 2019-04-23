@@ -1,0 +1,32 @@
+{
+  "name": "react-redux-generator",
+  "version": "1.0.0",
+  "description": "基于react+redux+babel+webpack+antDesign的react脚手架",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0",
+    "download-git-repo": "^1.1.0",
+    "handlebars": "^4.1.2",
+    "inquirer": "^6.3.1",
+    "log-symbols": "^3.0.0",
+    "ora": "^3.4.0",
+    "shelljs": "^0.8.3"
+  }, 
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevekeol/buildnpmpack.git"
+  },   
+  "keywords": [
+    "react",
+    "redux",
+    "babel",
+    "webpack",
+    "generator"
+  ],
+  "author": "stevekeol",
+  "license": "MIT"
+}
