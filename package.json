@@ -1,8 +1,11 @@
 {
-  "name": "react-redux-generator",
+  "name": "rrg-jie",
   "version": "1.0.0",
   "description": "基于react+redux+babel+webpack+antDesign的react脚手架",
   "main": "index.js",
+  "bin": {
+    "RRG-JIE": "index.js"
+  },  
   "scripts": {
     "test": "test"
   },
@@ -18,7 +21,7 @@
   }, 
   "repository": {
     "type": "git",
-    "url": "https://github.com/stevekeol/react-redux-generator.git"
+    "url": "git+https://github.com/stevekeol/react-redux-generator.git"
   },   
   "keywords": [
     "react",
