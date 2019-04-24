@@ -32,7 +32,7 @@
         console.log(answers);
         const spinner = ora('正在下载模板...\n');
         spinner.start();
-        child_process.exec('git clone https://github.com/stevekeol/react-generator-new', function(err, stdout, stderr) { //运行命令进行下载模块的方式3;参考文末
+        child_process.exec('git clone https://github.com/stevekeol/react-redux-generator-template', function(err, stdout, stderr) { //运行命令进行下载模块的方式3;参考文末
           if (err) {
             spinner.fail();
             console.log(symbols.error, chalk.red('模板下载失败'))

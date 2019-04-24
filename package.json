@@ -4,8 +4,8 @@
   "description": "基于react+redux+babel+webpack+antDesign的react脚手架",
   "main": "index.js",
   "bin": {
-    "RRG-JIE": "index.js"
-  },  
+    "rrg": "./bin/index.js"
+  },
   "scripts": {
     "test": "test"
   },
@@ -30,6 +30,9 @@
     "webpack",
     "generator"
   ],
-  "author": "stevekeol",
+  "author": {
+      "name": "stevekeol",
+      "email": "stevekeol@sina.com"    
+  },
   "license": "MIT"
 }
