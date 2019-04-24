@@ -1,5 +1,5 @@
 {
-  "name": "rrg-jie",
+  "name": "rrg",
   "version": "1.0.0",
   "description": "基于react+redux+babel+webpack+antDesign的react脚手架",
   "main": "index.js",
