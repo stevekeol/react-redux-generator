@@ -2,6 +2,7 @@
 
   const fs = require('fs');
   const path = require('path');
+  var figlet = require('figlet'); //支持命令行艺术字体
   const program = require('commander'); //自动的解析命令和参数，用于处理用户输入的命令
   const chalk = require('chalk'); //可以给终端的字体加上颜色
   const ora = require('ora'); //下载过程久的话，可以用于显示下载中的动画效果
@@ -12,8 +13,16 @@
   const download = require('download-git-repo'); //下载并提取 git 仓库，用于下载项目模板
   const handlebars = require('handlebars'); //模板引擎，将用户提交的信息动态填充到文件中
 
-  program.version('1.1.0', '-v, --version') //会将-v和--version添加到命令行中，调用时可通过带上该参数获取该脚手架的版本号（命令 -v/--version）
-  .command('<name>') //定义初始化命令,name参数必传，作为项目文件名
+  console.log(
+    chalk.red(
+      figlet.textSync('rrg', { horizontalLayout: 'full' })
+    )
+  );
+
+  program
+  .name('rrg')
+  .version('1.1.0', '-v, --version') //会将-v和--version添加到命令行中，调用时可通过带上该参数获取该脚手架的版本号（命令 -v/--version）
+  .command('init <name>') //定义初始化命令,name参数必传，作为项目文件名
   .action(name => { //action是执行command时的回调，项目生成过程发生在该回调中
     console.log(name);
 
