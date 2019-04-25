@@ -20,9 +20,13 @@
       figlet.textSync('rrg', { horizontalLayout: 'full' })
     )
   );
+  conosle.log(
+    chalk.green('create a new project with rrg: \n rrg init <projectName>\n')
+  );
 
   program
   .version(version, '-v, --version') //会将-v和--version添加到命令行中，调用时可通过带上该参数获取该脚手架的版本号（命令 -v/--version）
+
   .command('init <name>') //定义初始化命令,name参数必传，作为项目文件名
   .action(name => { //action是执行command时的回调，项目生成过程发生在该回调中
     if (!fs.existsSync(name)) {
@@ -38,6 +42,7 @@
         }
       ]).then(answers => { //answers为用户输入参数组成的对象
         console.log(answers);
+        console.log('\n');
         const spinner = ora('正在下载模板...\n');
         spinner.start();
         child_process.exec('git clone https://github.com/stevekeol/react-redux-generator-template', function(err, stdout, stderr) { //运行命令进行下载模块的方式3;参考文末
@@ -46,7 +51,7 @@
             console.log(symbols.error, chalk.red('模板下载失败'))
             console.log(err);
           } else {
-            spinner.succeed
+            spinner.succeed();
 
             //更改项目文件名
             shell.mv(process.cwd() + '/react-redux-generator-template', process.cwd() + '/' + name); //将在当前目录刚下载成功的模板，重命名为用户输入的项目名
@@ -67,6 +72,9 @@
               																																			//预编译
               fs.writeFileSync(filename, result);
               console.log(symbols.success, chalk.green(`${filename}初始化完成`));
+
+              console.log('install dependencies:');
+              console.log('cd %s && npm install', name);
             } else {
               console.log(symbols.error, chalk.red(`${filename}不存在`));
             }
