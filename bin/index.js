@@ -20,7 +20,7 @@
       figlet.textSync('rrg', { horizontalLayout: 'full' })
     )
   );
-  conosle.log(
+  console.log(
     chalk.green('create a new project with rrg: \n rrg init <projectName>\n')
   );
 

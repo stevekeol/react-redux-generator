@@ -1,6 +1,6 @@
 {
   "name": "rrg",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "基于react+redux+babel+webpack+antDesign的react脚手架",
   "main": "index.js",
   "bin": {
