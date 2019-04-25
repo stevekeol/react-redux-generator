@@ -1,4 +1,3 @@
-#!/usr/bin/env node //告诉操作系统执行这个脚本的时候,去环境设置寻找node目录
 
   const fs = require('fs');
   const path = require('path');
