@@ -1,6 +1,6 @@
 {
   "name": "rrg",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "基于react+redux+babel+webpack+antDesign的react脚手架",
   "main": "index.js",
   "bin": {
@@ -13,17 +13,17 @@
     "chalk": "^2.4.2",
     "commander": "^2.20.0",
     "download-git-repo": "^1.1.0",
+    "figlet": "^1.2.1",
     "handlebars": "^4.1.2",
     "inquirer": "^6.3.1",
     "log-symbols": "^3.0.0",
     "ora": "^3.4.0",
-    "shelljs": "^0.8.3",
-    "figlet": "^1.2.1"
-  }, 
+    "shelljs": "^0.8.3"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stevekeol/react-redux-generator.git"
-  },   
+  },
   "keywords": [
     "react",
     "redux",
@@ -32,8 +32,8 @@
     "generator"
   ],
   "author": {
-      "name": "stevekeol",
-      "email": "stevekeol@sina.com"    
+    "name": "stevekeol",
+    "email": "stevekeol@sina.com"
   },
   "license": "MIT"
 }
