@@ -1,6 +1,6 @@
 {
   "name": "rrg",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "基于react+redux+babel+webpack+antDesign的react脚手架",
   "main": "index.js",
   "bin": {
@@ -17,7 +17,8 @@
     "inquirer": "^6.3.1",
     "log-symbols": "^3.0.0",
     "ora": "^3.4.0",
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.3",
+    "figlet": "^1.2.1"
   }, 
   "repository": {
     "type": "git",
