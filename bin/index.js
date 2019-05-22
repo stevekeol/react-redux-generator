@@ -12,21 +12,19 @@
   const symbols = require('log-symbols'); //可以在终端上显示出 √ 或 × 等的图标
   const download = require('download-git-repo'); //下载并提取 git 仓库，用于下载项目模板
   const handlebars = require('handlebars'); //模板引擎，将用户提交的信息动态填充到文件中
+  const boxen = require('boxen'); //控制台以方框形式打印信息
 
   const version = require('../package.json').version;
 
-  console.log(
-    chalk.red(
-      figlet.textSync('rrg', { horizontalLayout: 'full' })
-    )
-  );
-  console.log(
-    chalk.green('create a new project with rrg: \n rrg init <projectName>\n')
-  );
+  const message = `${chalk.green(figlet.textSync('rrg', { horizontalLayout: 'full' }))}\n\nTo create a new project with rrg(v${version}): ${chalk.green('rrg init <projectName>')}`
+
+  console.log(boxen(message, {
+    padding: 1,
+    borderColor: 'green',
+    margin: 1
+  }));
 
   program
-  .version(version, '-v, --version') //会将-v和--version添加到命令行中，调用时可通过带上该参数获取该脚手架的版本号（命令 -v/--version）
-
   .command('init <name>') //定义初始化命令,name参数必传，作为项目文件名
   .action(name => { //action是执行command时的回调，项目生成过程发生在该回调中
     if (!fs.existsSync(name)) {
@@ -73,8 +71,8 @@
               fs.writeFileSync(filename, result);
               console.log(symbols.success, chalk.green(`${filename}初始化完成`));
 
-              console.log('install dependencies:');
-              console.log('cd %s && npm install', name);
+              console.log('\ninstall dependencies:');
+              console.log(chalk.green(`cd ${name} && npm install`));
             } else {
               console.log(symbols.error, chalk.red(`${filename}不存在`));
             }
